@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8fb">
+  <meta name="description" content="Политика конфиденциальности строительной компании «СК ПСП»: обработка персональных данных, cookies, порядок предоставления и защиты информации.">
+  <title>Политика конфиденциальности — СК ПСП</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    
+    :root {
+      --ink: #12243a;
+      --blue: #164ac0;
+      --blue-dark: #0d2f7e;
+      --blue-soft: #eaf1ff;
+      --yellow: #ffd33d;
+      --paper: #f6f8fb;
+      --white: #fff;
+      --muted: #66758a;
+      --line: #dfe6ef;
+      --radius: 22px;
+      --container: 1200px;
+      --shadow: 0 20px 55px rgba(18,36,58,.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: 'Manrope', Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .16em; color: var(--blue); }
+    .eyebrow::before { content: ''; width: 24px; height: 3px; background: var(--yellow); border-radius: 3px; }
+    .section { padding: 112px 0; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 44px; }
+    .section-heading h2 { max-width: 690px; margin: 15px 0 0; font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -.045em; font-weight: 700; }
+    .section-heading p { max-width: 360px; margin: 0 0 4px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+    .btn { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 12px; border: 0; border-radius: 8px; padding: 0 22px; background: var(--yellow); color: var(--ink); font-size: 13px; font-weight: 800; cursor: pointer; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-2px); background: #ffdf65; box-shadow: 0 10px 24px rgba(255,211,61,.28); }
+    .btn .arrow { font-size: 18px; line-height: 1; }
+    .btn--blue { background: var(--blue); color: #fff; }
+    .btn--blue:hover { background: var(--blue-dark); box-shadow: 0 10px 24px rgba(22,74,192,.22); }
+    .text-link { display: inline-flex; align-items: center; gap: 10px; color: var(--blue); font-size: 13px; font-weight: 800; }
+    .text-link .arrow { font-size: 18px; transition: transform .2s ease; }
+    .text-link:hover .arrow { transform: translateX(4px); }
+
+    /* Header */
+    .topline { background: var(--ink); color: rgba(255,255,255,.78); font-size: 11px; }
+    .topline-inner { display: flex; justify-content: space-between; align-items: center; min-height: 38px; gap: 20px; }
+    .topline-left, .topline-right { display: flex; align-items: center; gap: 22px; }
+    .topline a:hover { color: var(--yellow); }
+    .topline .dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--yellow); margin-right: 7px; vertical-align: middle; }
+    .header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(18,36,58,.07); }
+    .nav-inner { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .brand-mark { position: relative; width: 42px; height: 42px; background: var(--blue); border-radius: 9px; display: grid; place-items: center; overflow: hidden; }
+    .brand-mark::before { content: ''; position: absolute; top: -13px; right: -12px; width: 28px; height: 28px; background: var(--yellow); transform: rotate(45deg); }
+    .brand-mark svg { position: relative; width: 27px; height: 27px; }
+    .brand-copy strong { display: block; font-size: 18px; letter-spacing: -.06em; font-weight: 800; line-height: 1.1; }
+    .brand-copy span { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .13em; font-weight: 700; }
+    .nav-links { display: flex; align-items: center; gap: clamp(17px, 2.2vw, 30px); margin-left: auto; }
+    .nav-links a { position: relative; font-size: 12px; font-weight: 700; color: #435169; transition: color .2s ease; }
+    .nav-links a::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -9px; height: 2px; background: var(--yellow); transition: right .2s ease; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { right: 0; }
+    .header-cta { min-height: 46px; padding-inline: 17px; white-space: nowrap; font-size: 11px; }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: white; border-radius: 8px; width: 46px; height: 46px; cursor: pointer; }
+    .menu-toggle span { display: block; width: 18px; height: 2px; background: var(--ink); margin: 5px auto; transition: transform .2s; }
+
+    /* Hero */
+    .hero { position: relative; padding: 58px 0 74px; overflow: hidden; background: radial-gradient(circle at 88% 20%, #e7efff 0, transparent 28%), var(--paper); }
+    .hero::before { content: ''; position: absolute; width: 500px; height: 500px; border: 1px solid rgba(22,74,192,.08); border-radius: 50%; top: -270px; right: -80px; box-shadow: 0 0 0 55px rgba(22,74,192,.025), 0 0 0 110px rgba(22,74,192,.02); }
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 54px; }
+    .hero-copy { padding: 8px 0 28px; }
+    .hero-kicker { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; color: var(--blue); font-weight: 800; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-kicker .kicker-icon { width: 30px; height: 30px; display: grid; place-items: center; color: var(--ink); background: var(--yellow); border-radius: 7px; font-size: 15px; letter-spacing: 0; }
+    h1 { max-width: 650px; margin: 0; font-size: clamp(45px, 5.6vw, 76px); line-height: .99; letter-spacing: -.065em; font-weight: 800; }
+    h1 .accent { color: var(--blue); position: relative; white-space: nowrap; }
+    h1 .accent::after { content: ''; position: absolute; left: 2px; bottom: -4px; width: calc(100% - 3px); height: 7px; background: var(--yellow); z-index: -1; transform: skewX(-18deg); }
+    .hero-lead { max-width: 490px; margin: 29px 0 27px; color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+    .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 42px; color: var(--muted); font-size: 11px; font-weight: 600; }
+    .hero-note svg { color: var(--blue); flex-shrink: 0; }
+    .hero-visual { position: relative; min-width: 0; }
+    .hero-photo-wrap { position: relative; height: clamp(410px, 44vw, 580px); border-radius: 13px 13px 90px 13px; overflow: hidden; background: #ced8e6; box-shadow: var(--shadow); }
+    .hero-photo-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,27,59,.02) 30%, rgba(8,27,59,.56) 100%); }
+    .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: scale(1.03); }
+    .photo-grid { position: absolute; inset: 0; z-index: 1; opacity: .13; background-image: linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(180deg, black, transparent 85%); }
+    .hero-photo-caption { position: absolute; z-index: 2; left: 29px; bottom: 27px; color: white; }
+    .hero-photo-caption span { display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .16em; font-size: 9px; font-weight: 800; color: var(--yellow); }
+    .hero-photo-caption strong { display: block; font-size: 20px; font-weight: 700; letter-spacing: -.03em; }
+    .hero-stamp { position: absolute; z-index: 3; top: 30px; left: -28px; display: flex; align-items: center; gap: 12px; max-width: 235px; padding: 15px 18px; background: var(--yellow); border-radius: 9px; box-shadow: 0 12px 30px rgba(17,36,58,.12); }
+    .hero-stamp-mark { font-size: 27px; font-weight: 800; line-height: 1; }
+    .hero-stamp span { font-size: 10px; line-height: 1.5; font-weight: 800; }
+    .hero-side-label { position: absolute; right: -18px; top: 33%; writing-mode: vertical-rl; transform: rotate(180deg); color: var(--blue); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .18em; }
+    .hero-index { position: absolute; right: 24px; top: 24px; z-index: 2; font-size: 11px; letter-spacing: .08em; color: white; padding: 7px 10px; border: 1px solid rgba(255,255,255,.5); border-radius: 4px; }
+
+    /* Specialties strip */
+    .specialties { background: var(--blue); color: white; }
+    .specialties-inner { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .specialty { position: relative; min-height: 105px; display: flex; align-items: center; gap: 15px; padding: 24px 20px; border-right: 1px solid rgba(255,255,255,.17); }
+    .specialty:first-child { padding-left: 0; }
+    .specialty:last-child { border-right: 0; }
+    .specialty-number { color: var(--yellow); font-size: 11px; font-weight: 800; }
+    .specialty strong { font-size: 12px; line-height: 1.5; font-weight: 700; }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: .93fr 1.07fr; gap: 86px; align-items: center; }
+    .about-visual { position: relative; padding: 0 0 38px 38px; }
+    .about-visual::before { content: ''; position: absolute; z-index: -1; left: 0; top: -25px; width: 70%; height: 70%; background: var(--yellow); border-radius: 10px; }
+    .about-photo { width: 100%; height: 470px; border-radius: 8px 8px 8px 70px; object-fit: cover; box-shadow: var(--shadow); }
+    .about-tag { position: absolute; right: -24px; bottom: 0; max-width: 220px; padding: 20px 23px; background: var(--blue); color: white; border-radius: 8px; }
+    .about-tag strong { display: block; margin-bottom: 8px; color: var(--yellow); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+    .about-tag span { display: block; font-size: 11px; line-height: 1.65; color: rgba(255,255,255,.78); }
+    .about-copy h2 { margin: 16px 0 22px; font-size: clamp(32px, 3.8vw, 49px); line-height: 1.08; letter-spacing: -.05em; }
+    .about-copy > p { color: var(--muted); font-size: 14px; line-height: 1.9; margin: 0 0 28px; }
+    .value-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 24px; margin: 32px 0 34px; }
+    .value-item { display: flex; align-items: flex-start; gap: 12px; }
+    .value-check { flex: 0 0 27px; width: 27px; height: 27px; display: grid; place-items: center; border-radius: 7px; background: var(--blue-soft); color: var(--blue); font-size: 14px; font-weight: 800; }
+    .value-item strong { display: block; margin: 1px 0 5px; font-size: 12px; font-weight: 800; }
+    .value-item span { display: block; color: var(--muted); font-size: 11px; line-height: 1.6; }
+
+    /* Services */
+    .services-section { background: #edf2f8; }
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .service-card { position: relative; display: flex; flex-direction: column; min-height: 305px; padding: 28px 24px 24px; background: white; border: 1px solid rgba(18,36,58,.04); border-radius: 10px; transition: transform .25s ease, box-shadow .25s ease; overflow: hidden; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 42px rgba(18,36,58,.09); }
+    .service-num { display: flex; align-items: center; justify-content: space-between; color: #9aa8bb; font-size: 11px; font-weight: 800; letter-spacing: .1em; }
+    .service-icon { width: 49px; height: 49px; display: grid; place-items: center; margin-top: 27px; background: var(--blue-soft); border-radius: 12px; color: var(--blue); }
+    .service-icon svg { width: 26px; height: 26px; }
+    .service-card h3 { margin: 22px 0 12px; font-size: 17px; line-height: 1.35; letter-spacing: -.035em; }
+    .service-card p { margin: 0 0 23px; color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .service-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); }
+    .service-bottom span { color: var(--muted); font-size: 10px; font-weight: 700; }
+    .service-arrow { width: 34px; height: 34px; display: grid; place-items: center; background: var(--yellow); border-radius: 50%; color: var(--ink); font-size: 18px; transition: transform .2s; }
+    .service-card:hover .service-arrow { transform: rotate(-45deg); }
+
+    /* Project categories */
+    .projects-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .project-card { position: relative; min-height: 255px; overflow: hidden; border-radius: 10px; background: #d6e0ec; isolation: isolate; }
+    .project-card:nth-child(1), .project-card:nth-child(2) { grid-column: span 6; min-height: 315px; }
+    .project-card:nth-child(n+3) { grid-column: span 3; }
+    .project-card img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+    .project-card::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(8,24,49,0) 20%, rgba(8,24,49,.82) 100%); }
+    .project-card:hover img { transform: scale(1.06); }
+    .project-content { position: absolute; left: 22px; right: 22px; bottom: 22px; color: white; }
+    .project-content span { display: block; margin-bottom: 9px; color: var(--yellow); font-size: 9px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .project-content h3 { margin: 0; font-size: clamp(17px, 2vw, 24px); line-height: 1.2; letter-spacing: -.035em; }
+    .project-content p { margin: 9px 0 0; color: rgba(255,255,255,.78); font-size: 11px; line-height: 1.6; max-width: 350px; }
+    .projects-foot { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 30px; }
+    .projects-foot p { max-width: 570px; margin: 0; font-size: 12px; line-height: 1.8; color: var(--muted); }
+
+    /* Approach */
+    .approach { background: var(--ink); color: white; overflow: hidden; position: relative; }
+    .approach::before { content: ''; position: absolute; width: 450px; height: 450px; border: 1px solid rgba(255,255,255,.07); border-radius: 50%; right: -170px; bottom: -230px; box-shadow: 0 0 0 55px rgba(255,255,255,.02), 0 0 0 110px rgba(255,255,255,.018); }
+    .approach .section-heading h2 { color: white; }
+    .approach .section-heading p { color: #a7b3c4; }
+    .approach .eyebrow { color: var(--yellow); }
+    .steps { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+    .steps::before { content: ''; position: absolute; left: 22px; right: 22px; top: 23px; border-top: 1px solid rgba(255,255,255,.2); }
+    .step { position: relative; padding-top: 68px; }
+    .step-num { position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; background: var(--ink); color: var(--yellow); font-size: 12px; font-weight: 800; }
+    .step h3 { margin: 0 0 11px; font-size: 16px; letter-spacing: -.02em; }
+    .step p { margin: 0; color: #a7b3c4; font-size: 12px; line-height: 1.8; }
+
+    /* CTA */
+    .cta-wrap { padding: 92px 0; background: #edf2f8; }
+    .cta-panel { position: relative; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 36px; padding: 54px 60px; background: var(--yellow); border-radius: 13px; overflow: hidden; }
+    .cta-panel::after { content: ''; position: absolute; right: -75px; top: -170px; width: 390px; height: 390px; border: 1px solid rgba(18,36,58,.13); border-radius: 50%; box-shadow: 0 0 0 45px rgba(18,36,58,.04), 0 0 0 90px rgba(18,36,58,.035); }
+    .cta-copy, .cta-action { position: relative; z-index: 1; }
+    .cta-copy .eyebrow { color: var(--ink); }
+    .cta-copy h2 { max-width: 650px; margin: 15px 0 13px; font-size: clamp(31px, 4vw, 47px); line-height: 1.08; letter-spacing: -.055em; }
+    .cta-copy p { max-width: 500px; margin: 0; color: rgba(18,36,58,.72); font-size: 13px; line-height: 1.8; }
+    .cta-action { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+    .cta-action .btn { background: var(--ink); color: white; }
+    .cta-action .btn:hover { background: var(--blue-dark); }
+    .cta-action small { font-size: 10px; line-height: 1.6; color: rgba(18,36,58,.7); }
+
+    /* Contact and footer */
+    .contact-section { padding: 100px 0 86px; background: white; }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 78px; }
+    .contact-copy h2 { margin: 14px 0 19px; font-size: clamp(35px, 4vw, 52px); line-height: 1.05; letter-spacing: -.055em; }
+    .contact-copy > p { margin: 0 0 32px; color: var(--muted); font-size: 13px; line-height: 1.8; max-width: 420px; }
+    .contact-list { display: grid; gap: 20px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; }
+    .contact-icon { width: 40px; height: 40px; display: grid; place-items: center; flex-shrink: 0; background: var(--blue-soft); color: var(--blue); border-radius: 9px; }
+    .contact-icon svg { width: 19px; height: 19px; }
+    .contact-item small { display: block; margin: 2px 0 5px; color: var(--muted); font-size: 10px; font-weight: 700; }
+    .contact-item strong, .contact-item a { font-size: 13px; line-height: 1.65; font-weight: 800; }
+    .contact-item a:hover { color: var(--blue); }
+    .contact-form { padding: 36px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; }
+    .contact-form h3 { margin: 0 0 8px; font-size: 23px; letter-spacing: -.04em; }
+    .contact-form > p { margin: 0 0 26px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field--full { grid-column: 1 / -1; }
+    .field label { font-size: 10px; font-weight: 800; color: #435169; }
+    .field input, .field textarea { width: 100%; border: 1px solid #dce4ee; border-radius: 7px; background: white; color: var(--ink); padding: 14px 14px; outline: 0; font-size: 12px; transition: border-color .2s, box-shadow .2s; }
+    .field input:focus, .field textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,74,192,.09); }
+    .field textarea { resize: vertical; min-height: 105px; }
+    .consent { display: flex; align-items: flex-start; gap: 9px; margin: 19px 0 20px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+    .consent input { margin: 2px 0 0; accent-color: var(--blue); flex-shrink: 0; }
+    .consent a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+    .form-submit { width: 100%; }
+    .form-status { display: none; margin-top: 12px; color: var(--blue); font-size: 12px; line-height: 1.6; }
+    .form-status.visible { display: block; }
+    .honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+    .footer { background: #0b1a2e; color: white; padding: 38px 0 24px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 36px; padding-bottom: 32px; }
+    .footer-brand { max-width: 330px; }
+    .footer-brand .brand-copy strong { color: white; }
+    .footer-brand .brand-copy span { color: #a7b3c4; }
+    .footer-brand p { margin: 20px 0 0; color: #9daabd; font-size: 11px; line-height: 1.8; }
+    .footer-links { display: flex; gap: clamp(28px, 5vw, 65px); }
+    .footer-col strong { display: block; margin-bottom: 15px; color: #fff; font-size: 11px; }
+    .footer-col a { display: block; margin: 10px 0; color: #a7b3c4; font-size: 11px; }
+    .footer-col a:hover { color: var(--yellow); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.11); color: #8391a6; font-size: 10px; }
+    .footer-bottom a:hover { color: white; }
+    .back-top { display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; color: white; font-size: 15px; }
+
+    /* Reveal motion and responsive */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 1060px) {
+      .nav-links { gap: 15px; }
+      .nav-links a { font-size: 11px; }
+      .header-cta { display: none; }
+      .hero-grid { gap: 34px; }
+      .hero-stamp { left: -14px; }
+      .about-grid { gap: 55px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card { min-height: 285px; }
+      .contact-grid { gap: 42px; }
+    }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 36px, var(--container)); }
+      .nav-links { visibility: hidden; }
+      .nav-links.is-open { visibility: visible; }
+      .section { padding: 76px 0; }
+      .section-heading { display: block; margin-bottom: 30px; }
+      .section-heading p { margin-top: 17px; }
+      .topline-inner { justify-content: center; min-height: 34px; }
+      .topline-left { display: none; }
+      .nav-inner { min-height: 72px; }
+      .brand-mark { width: 39px; height: 39px; }
+      .brand-copy strong { font-size: 17px; }
+      .brand-copy span { font-size: 8px; }
+      .menu-toggle { display: block; flex-shrink: 0; }
+      .nav-links { position: fixed; z-index: 99; top: 106px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 15px 22px 30px; background: white; transform: translateX(100%); transition: transform .25s ease; overflow-y: auto; }
+      .nav-links.is-open { transform: translateX(0); }
+      .nav-links a { padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+      .nav-links a::after { display: none; }
+      .nav-links .mobile-cta { display: block; margin-top: 24px; padding: 0; border: 0; }
+      .nav-links .mobile-cta .btn { width: 100%; }
+      .hero { padding: 45px 0 50px; }
+      .hero-grid { display: flex; flex-direction: column; align-items: stretch; gap: 36px; }
+      .hero-copy { padding: 0; }
+      .hero-kicker { margin-bottom: 23px; font-size: 9px; }
+      h1 { font-size: clamp(43px, 12vw, 62px); }
+      .hero-lead { font-size: 13px; margin: 23px 0; }
+      .hero-actions { gap: 18px; }
+      .hero-actions .btn { min-height: 51px; }
+      .hero-note { margin-top: 25px; }
+      .hero-photo-wrap { height: 390px; border-radius: 9px 9px 60px 9px; }
+      .hero-stamp { left: 10px; top: -18px; padding: 12px 15px; }
+      .hero-side-label { right: -8px; top: 40%; }
+      .specialties-inner { grid-template-columns: 1fr 1fr; }
+      .specialty { min-height: 84px; padding: 18px 12px; border-bottom: 1px solid rgba(255,255,255,.17); }
+      .specialty:nth-child(2) { border-right: 0; }
+      .specialty:nth-child(3) { padding-left: 0; border-bottom: 0; }
+      .specialty:nth-child(4) { border-bottom: 0; border-right: 0; }
+      .specialty strong { font-size: 11px; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-visual { padding-left: 20px; padding-bottom: 26px; margin-right: 14px; }
+      .about-photo { height: 350px; border-bottom-left-radius: 45px; }
+      .about-tag { right: -10px; max-width: 195px; padding: 15px 17px; }
+      .about-copy h2 { font-size: 37px; }
+      .value-list { gap: 18px 12px; }
+      .value-item { gap: 9px; }
+      .services-grid { grid-template-columns: 1fr; gap: 12px; }
+      .service-card { min-height: 260px; padding: 25px; }
+      .service-icon { margin-top: 18px; }
+      .service-card h3 { margin-top: 17px; }
+      .project-card:nth-child(1), .project-card:nth-child(2) { grid-column: span 12; min-height: 285px; }
+      .project-card:nth-child(n+3) { grid-column: span 6; min-height: 220px; }
+      .project-card:nth-child(n+3) .project-content { left: 14px; right: 14px; bottom: 15px; }
+      .project-card:nth-child(n+3) .project-content h3 { font-size: 15px; }
+      .project-card:nth-child(n+3) .project-content p { display: none; }
+      .projects-foot { align-items: flex-start; flex-direction: column; }
+      .steps { grid-template-columns: 1fr 1fr; gap: 30px 20px; }
+      .steps::before { display: none; }
+      .step { padding-top: 60px; }
+      .step h3 { font-size: 14px; }
+      .step p { font-size: 11px; }
+      .cta-wrap { padding: 60px 0; }
+      .cta-panel { grid-template-columns: 1fr; padding: 35px 26px; gap: 26px; }
+      .cta-panel::after { right: -230px; }
+      .cta-copy h2 { font-size: 36px; }
+      .contact-section { padding: 75px 0 65px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 38px; }
+      .contact-copy h2 { font-size: 40px; }
+      .contact-form { padding: 25px 20px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field--full { grid-column: auto; }
+      .footer-top { flex-direction: column; }
+      .footer-links { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+      .footer-bottom { flex-wrap: wrap; line-height: 1.6; }
+    }
+    @media (max-width: 380px) {
+      .container { width: calc(100% - 28px); }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .text-link { padding: 7px 0; }
+      .value-list { grid-template-columns: 1fr; }
+      .project-card:nth-child(n+3) { grid-column: span 12; min-height: 200px; }
+      .project-card:nth-child(n+3) .project-content p { display: block; }
+      .steps { grid-template-columns: 1fr; }
+    }
+  
+    
+    /* --- generated pages --- */
+    .breadcrumbs { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 26px; }
+    .breadcrumbs a { color: var(--blue); }
+    .breadcrumbs .cur { color: var(--ink); }
+    .nav-links a.active { color: var(--blue); }
+    .nav-links a.active::after { right: 0; }
+    .hero-page { padding: 46px 0 64px; }
+    .hero-page .hero-grid { gap: 40px; }
+    .hero-page h1 { font-size: clamp(36px, 4.4vw, 54px); line-height: 1.04; letter-spacing: -.05em; }
+    .hero-page .hero-photo-wrap { height: clamp(320px, 36vw, 440px); border-radius: 10px; }
+    .prose { max-width: 860px; }
+    .prose h2 { margin: 0 0 18px; font-size: clamp(26px, 3.2vw, 40px); letter-spacing: -.04em; line-height: 1.12; }
+    .prose h3 { margin: 26px 0 12px; font-size: 17px; letter-spacing: -.02em; }
+    .prose p { margin: 0 0 16px; color: #3d4c61; font-size: 14px; line-height: 1.85; }
+    .prose ul { margin: 0 0 18px; padding-left: 20px; color: #3d4c61; font-size: 14px; line-height: 1.8; }
+    .prose li { margin: 6px 0; }
+    .prose a { color: var(--blue); font-weight: 700; }
+    .mcard-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .mcard { display: flex; flex-direction: column; background: white; border: 1px solid rgba(18,36,58,.04); border-radius: 10px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
+    .mcard:hover { transform: translateY(-6px); box-shadow: 0 20px 42px rgba(18,36,58,.09); }
+    .mcard-media { position: relative; aspect-ratio: 16/10; background: #d6e0ec; }
+    .mcard-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .mcard-body { padding: 20px 22px 22px; }
+    .mcard-body h3 { margin: 0 0 8px; font-size: 16px; letter-spacing: -.03em; }
+    .mcard-body p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .mcard-foot { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; color: var(--blue); font-size: 12px; font-weight: 800; }
+    .mcard-date { display: block; margin-bottom: 8px; color: var(--blue); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .logo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .logo-card { display: flex; align-items: center; gap: 12px; padding: 18px; background: white; border: 1px solid rgba(18,36,58,.04); border-radius: 10px; transition: transform .25s ease, box-shadow .25s ease; }
+    .logo-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(18,36,58,.08); }
+    .logo-card img { width: 46px; height: 46px; object-fit: contain; flex-shrink: 0; }
+    .logo-card span { font-size: 12px; font-weight: 700; line-height: 1.4; }
+    .map-block { margin-top: 44px; }
+    .map-block img { border-radius: 12px; box-shadow: var(--shadow); }
+    @media (max-width: 1060px) { .mcard-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 760px) {
+      .mcard-grid { grid-template-columns: 1fr; }
+      .logo-grid { grid-template-columns: repeat(2, 1fr); }
+      body { overflow-x: clip; }
+      .nav-links { visibility: hidden; }
+      .nav-links.is-open { visibility: visible; }
+      .hero-page { padding: 36px 0 50px; }
+      .hero-page h1 { font-size: 34px; }
+      .hero-page .hero-photo-wrap { height: 300px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="topline">
+    <div class="container topline-inner">
+      <div class="topline-left"><span><i class="dot"></i>Строительство и реконструкция</span><span>Санкт-Петербург</span></div>
+      <div class="topline-right"><a href="mailto:bik-m@mail.ru">bik-m@mail.ru</a><a href="tel:+78123886371">+7 (812) 388-63-71</a></div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="СК ПСП — главная">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 23V9h4l7 8 7-8h4v14h-4v-8l-7 8-7-8v8H5Z" fill="white"/><path d="M5 26h22" stroke="#FFD33D" stroke-width="2"/></svg></span>
+        <span class="brand-copy"><strong>СК ПСП</strong><span>Строительная компания</span></span>
+      </a>
+      <nav class="nav-links" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a><a href="about.html">О компании</a><a href="services.html">Услуги</a><a href="objects.html">Объекты</a><a href="news.html">Новости</a><a href="contacts.html">Контакты</a>
+        <a class="mobile-cta" href="contacts.html"><span class="btn">Обсудить проект <span class="arrow">&#8597;</span></span></a>
+      </nav>
+      <a class="btn header-cta" href="contacts.html">Обсудить проект <span class="arrow">&#8597;</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="home">
+    
+    <section class="hero hero-page">
+      <div class="container"><div class="breadcrumbs"><a href="index.html">Главная</a> / <span class="cur">Политика конфиденциальности</span></div></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <h1>Политика конфиденциальности</h1>
+          <p class="hero-lead">Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению их безопасности, предпринимаемые ООО «СК ПСП» (ИНН 7810502379, ОГРН 1089847014586, г. Санкт-Петербург, ул. Цветочная, 18, лит. А; далее — Оператор).</p>
+          <div class="hero-actions"><a class="btn btn--blue" href="contacts.html">Обсудить ваш проект <span class="arrow">&#8597;</span></a><a class="text-link" href="services.html">Наши компетенции <span class="arrow">&#8594;</span></a></div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="hero-photo-wrap"><img class="hero-photo" src="img/slide1.jpg" alt="Политика конфиденциальности" loading="lazy"></div>
+        </div>
+      </div>
+    </section><section class="section"><div class="container"><div class="prose reveal"><h2>1. Общие положения</h2>
+<p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению их безопасности, предпринимаемые ООО «СК ПСП» (ИНН 7810502379, ОГРН 1089847014586, г. Санкт-Петербург, ул. Цветочная, 18, лит. А; далее — Оператор).</p>
+<p>Оператор стремится защищать персональные данные пользователей сайта. При использовании сайта пользователь подтверждает согласие с условиями настоящей политики.</p>
+<h2>2. Основные понятия</h2>
+<ul><li><b>Персональные данные</b> — любая информация, относящаяся к прямо или косвенно определённому определяемому физическому лицу (субъекту персональных данных).</li><li><b>Обработка персональных данных</b> — любое действие (операция) с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, передачу, блокирование, удаление, уничтожение.</li><li><b>Анонимизация персональных данных</b> — действия, в результате которых невозможно определить субъект персональных данных.</li></ul>
+<h2>3. Какие данные мы обрабатываем</h2>
+<p>Через формы обратной связи сайта пользователь может сообщить нам: фамилию, имя и отчество; номер телефона; текст обращения (описание задачи, параметры объекта). Эти данные передаются добровольно и только в объёме, необходимом для подготовки ответа или коммерческого предложения.</p>
+<h2>4. Цели обработки данных</h2>
+<ul><li>Ответ на обращение пользователя и подготовка коммерческого предложения.</li><li>Оформление и исполнение договора на выполнение строительно-монтажных работ.</li><li>Уведомление о ходе работ и статусе заявки.</li><li>Выполнение требований законодательства РФ.</li><li>Пересылка заявок, отправленных через формы обратной связи, на адрес электронной почты Оператора.</li></ul>
+<h2>5. Правовые основания обработки</h2>
+<p>Обработка осуществляется на основании: согласия субъекта персональных данных (ст. 9 ФЗ-152); необходимости исполнения договора; требований законодательства Российской Федерации.</p>
+<h2>6. Хранение и защита данных</h2>
+<p>Заявки из форм обратной связи (фамилия, имя и отчество, номер телефона, текст обращения) обрабатываются на сервере Оператора, расположенном на территории Российской Федерации, и пересылаются на адрес электронной почты Оператора; третьим лицам и за пределы территории Российской Федерации они не передаются. Доступ к полученным заявкам имеют только уполномоченные сотрудники. Персональные данные хранятся до достижения целей обработки (ответ на обращение, подготовка коммерческого предложения, исполнение договора), но не более 6 месяцев, после чего удаляются, если иное не предусмотрено законодательством РФ. Оператор принимает необходимые организационные и технические меры для защиты персональных данных от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования и распространения.</p>
+<h2>7. Передача данных</h2>
+<p>Персональные данные не передаются третьим лицам, за исключением следующих случаев: случаи, предусмотренные законодательством РФ (по запросу уполномоченных органов); передача контрагентам и субподрядчикам в объёме, необходимом для исполнения договора, при условии сохранения конфиденциальности. Персональные данные обрабатываются на сервере Оператора, расположенном на территории Российской Федерации, и за пределы территории Российской Федерации не передаются. Согласие на обработку персональных данных пользователь выражает отметкой в чекбоксе «Я соглашаюсь на обработку персональных данных» перед отправкой формы.</p>
+<h2>8. Cookies</h2>
+<p>Сайт может использовать cookies для корректной работы интерфейса и аналитики. Пользователь может отключить cookies в настройках браузера; это не влияет на базовую функциональность сайта.</p>
+<h2>9. Права пользователя</h2>
+<p>Пользователь вправе: получить сведения об обработке его персональных данных; потребовать уточнения, блокирования или уничтожения данных; отозвать согласие на обработку, направив запрос на <a href="mailto:bik-m@mail.ru">bik-m@mail.ru</a>.</p>
+<p><a href="mailto:bik-m@mail.ru" target="_blank" rel="noopener">bik-m@mail.ru</a></p>
+<h2>10. Заключительные положения</h2>
+<p>Пользователь может получить дополнительные сведения, касающиеся обработки персональных данных, направив запрос на <a href="mailto:bik-m@mail.ru">bik-m@mail.ru</a> или по адресу: г. Санкт-Петербург, ул. Цветочная, 18, лит. А. Оператор вправе вносить изменения в настоящую политику. Новая редакция вступает в силу с момента её публикации на сайте.</p>
+<p><a href="mailto:bik-m@mail.ru" target="_blank" rel="noopener">bik-m@mail.ru</a></p>
+<h3>Документы</h3>
+<p><a href="data/pers_bik.pdf" target="_blank" rel="noopener">PDF Политика общества в отношении обработки персональных данных ООО «БИК-Монолит»</a></p>
+<p><a href="data/pers_psp.pdf" target="_blank" rel="noopener">PDF Политика общества в отношении обработки персональных данных ООО «СК ПСП»</a></p>
+<h3>Полезное</h3>
+<p><a href="about.html" target="_blank" rel="noopener">О компании</a></p>
+<p><a href="contacts.html" target="_blank" rel="noopener">Контакты</a></p></div></div></section>
+    <section class="cta-wrap">
+      <div class="container"><div class="cta-panel reveal"><div class="cta-copy"><span class="eyebrow">Есть задача?</span><h2>Давайте обсудим ваш будущий объект.</h2><p>Расскажите о проекте — уточним исходные данные и обсудим, чем команда СК ПСП может быть полезна.</p></div><div class="cta-action"><a href="contacts.html" class="btn">Связаться с нами <span class="arrow">&#8597;</span></a><small>Ответим на вопросы и согласуем дальнейшие шаги.</small></div></div></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 23V9h4l7 8 7-8h4v14h-4v-8l-7 8-7-8v8H5Z" fill="white"/><path d="M5 26h22" stroke="#FFD33D" stroke-width="2"/></svg></span><span class="brand-copy"><strong>СК ПСП</strong><span>Строительная компания</span></span></a><p>Строительство и реконструкция объектов различного назначения. Генеральный подряд полного цикла.</p></div>
+        <div class="footer-links"><div class="footer-col"><strong>Компания</strong><a href="about.html">О компании</a><a href="services.html">Услуги</a><a href="news.html">Новости</a><a href="labor-safety.html">Охрана труда</a></div><div class="footer-col"><strong>Направления</strong><a href="service-general-contracting.html">Генеральный подряд</a><a href="service-monolith.html">Монолитные конструкции</a><a href="service-erection.html">Монтаж конструкций</a><a href="service-reconstruction.html">Реконструкция</a></div><div class="footer-col"><strong>Связаться</strong><a href="tel:+78123886371">+7 (812) 388-63-71</a><a href="mailto:bik-m@mail.ru">bik-m@mail.ru</a><a href="contacts.html">Оставить заявку</a></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> «СК ПСП» — строительная компания</span><a href="privacy.html">Политика конфиденциальности</a><a class="back-top" href="#home" aria-label="Наверх">↑</a></div>
+    </div>
+  </footer>
+  <script>
+    
+    (() => {
+      const menuToggle = document.getElementById('menu-toggle');
+      const nav = document.getElementById('site-nav');
+      const closeMenu = () => {
+        nav.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      };
+      menuToggle.addEventListener('click', () => {
+        const open = !nav.classList.contains('is-open');
+        nav.classList.toggle('is-open', open);
+        document.body.classList.toggle('menu-open', open);
+        menuToggle.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+      const revealItems = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries, o) => {
+          entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-visible'); o.unobserve(en.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+        revealItems.forEach(i => obs.observe(i));
+      } else revealItems.forEach(i => i.classList.add('is-visible'));
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+    })();
+
+  </script>
+</body>
+</html>
